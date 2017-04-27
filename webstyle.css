@@ -3,6 +3,8 @@ body {
 	margin-bottom: 30px;
 	margin-left: 100px;
 	margin-right: 100px;
+	background-color: #FBFAF7;
+
 }
 p {
 	margin-top: 0px;
@@ -62,6 +64,7 @@ p {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-weight: bold;
 	color: #006699;
+	border-bottom: 1px solid #ccc;
 }
 
 .title-large2 {
@@ -74,7 +77,12 @@ p {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	color: #334d55;
 }
-
+.title-large3 {
+	font-size: 28px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: bold;
+	color: #006699;
+}
 .title-black {
 	font-size: 35px;
 	font-family: Georgia, "Times New Roman", Times, serif;
@@ -131,3 +139,4 @@ strong a:active {
 .menulink:hover {background-color:#e6e6e6; }
 .active {background-color:#e6e6e6; }
 .active:hover {background-color:#e6e6e6; }
+
