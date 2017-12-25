@@ -37,9 +37,32 @@
 	<![endif]-->
 	
 	<link href='./images/icon.png' rel='icon' type='image/x-icon'/>
+	<link rel="stylesheet" media="screen" href="christmaslights.css" />
+<script type="text/javascript" src="soundmanager2-nodebug-jsmin.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/combo?2.6.0/build/yahoo-dom-event/yahoo-dom-event.js&2.6.0/build/animation/animation-min.js"></script>
+<script type="text/javascript" src="christmaslights.js"></script>
+<script type="text/javascript">
+var urlBase = './';
+soundManager.url = './';
+</script>
+
+	<script type="text/javascript" src="snowstorm.js"></script>
+    <script>
+    snowStorm.flakesMaxActive = 300;    // show more snow on screen at once
+    snowStorm.useTwinkleEffect = true; // let the snow flicker in and out of view
+    snowStorm.followMouse = true;
+    </script>
     
 </head>
 <body>
+
+ <div id="lights">
+  <!-- lights go here -->
+ </div>
+
+<!--  <div style="position:absolute;bottom:3px;left:3px">
+  <a href="?size=pico">pico</a> | <a href="?size=tiny">tiny</a> | <a href="?size=small">small</a> | <a href="?size=medium">medium</a> | <a href="?size=large">large</a>
+ </div> -->
 
 <!--Header-->
 <section class="container">
