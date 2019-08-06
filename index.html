@@ -21,6 +21,7 @@
       body {
         background-color: #eee;
       }
+      .font {font-family: "Times New Roman", Times, serif;}
       .main {
         width : 900px;
         margin : 20px auto;
@@ -80,7 +81,8 @@
         text-align:justify;
         text-justify:inter-word;
         padding-bottom: 5px;
-        font-size: 14px;
+        font-size: 15px;
+        font-family: "Times New Roman", Times, serif;
       }
             .work-column {
                 padding-top:5px;
@@ -94,27 +96,36 @@
                 outline: thin dotted #666666;
             }
     </style>
+             <style type="text/css">
+p.normal {font-style:normal}
+p.italic {font-style:italic}
+p.oblique {font-style:oblique}
+p.font {font-family: "Times New Roman", Times, serif;}
+li.font {font-family: "Times New Roman", Times, serif;}
+
+</style>
+    
   </head>
   <body>
     <div class="main">
       <div class="intro">
         <img class="me" src="./image/head.jpg">
                 <h2><span class="name">Lei Ke</span></h2>
-                <p><b> Ph.D. Student at CSE, HKUST </b></p>
-                <p>
+                <p class="font"><b> Ph.D. Student at CSE, HKUST </b></p>
+                <p class="font">
                 Email: keleiwhu [at] gmail.com 
                 </p>
-                <p> My name is Lei Ke (柯磊). I am an incoming Ph.D. student in Computer Science and Engineering at <a target="_blank" href='https://www.cse.ust.hk/'>HKUST</a>,
+                <p class="font"> My name is Lei Ke (柯磊). I am an incoming Ph.D. student in Computer Science and Engineering at <a target="_blank" href='https://www.cse.ust.hk/'>HKUST</a>,
                 co-supervised by <a target="_blank" href="http://www.cs.ust.hk/~cktang/">Prof. Chi-Keung Tang</a> and <a target="_blank" href="https://www.seng.ust.hk/web/eng/people_detail.php?id=379">Prof. Yu-Wing Tai</a>. I also work closely with <a target="_blank" href="https://wenjiepei.github.io/">Wenjie Pei</a> at Tencent Youtu X-lab where I am a research intern. My research interest lies in computer vision and deep learning. I received my bachelor's degree in software engineering from Wuhan University in 2018. </p>
-                <p> More info: [<a target="_blank" href="https://scholar.google.com/citations?user=WseeNrUAAAAJ&hl=en">Google Scholar</a>], [<a target="_blank" href="https://www.linkedin.com/in/leike-cv/">LinkedIn</a>], [<a target="_blank" href="https://github.com/Pony-Kelei">GitHub</a>].<br></p>
+                <p class="font"> More info: [<a target="_blank" href="https://scholar.google.com/citations?user=WseeNrUAAAAJ&hl=en">Google Scholar</a>], [<a target="_blank" href="https://www.linkedin.com/in/leike-cv/">LinkedIn</a>], [<a target="_blank" href="https://github.com/Pony-Kelei">GitHub</a>].<br></p>
       </div>
             
             <div class="news">
                 <h3>Updates</h3>
                 <ul>
-                    <li>2019.07: One paper accepted by ICCV 2019. </li>
-                    <li>2019.05: I will start my Ph.D study at HKUST this autumn. </li>
-                    <li>2019.02: One paper accepted by CVPR 2019.  </li>
+                    <li class="font">2019.07: One paper accepted by ICCV 2019. </li>
+                    <li class="font">2019.05: I will start my Ph.D study at HKUST this autumn. </li>
+                    <li class="font">2019.02: One paper accepted by CVPR 2019.  </li>
                 </ul>  
             </div>
 
@@ -123,34 +134,34 @@
                 <table>
                    <tr>
                         <td class="work-column">
-                            <img src="images/new_youtu.png" width=180>
+                            <img src="images/logo-youtu.png" width=35>
                         </td>
                         <td>
-                            <p style="font-size: 16px">2017.11&mdash;Future: Tencent Youtu X-lab Research intern</p>
+                            <p class="font" style="font-size: 16px">2017.11&mdash;Future: Tencent Youtu X-lab Research intern</p>
                         </td>
                     </tr>
                     <tr>
                         <td class="work-column">
-                            <img src="images/new_hkust.png" width=180>
+                            <img src="images/logo-hkust.png" width=32>
                         </td>
                         <td>
-                            <p style="font-size: 16px">2019.05&mdash;Future: HKUST Research Assistant</p>
+                            <p class="font" style="font-size: 16px">2019.05&mdash;Future: HKUST Research Assistant</p>
                         </td>
                     </tr>
                     <tr>
-                        <td class="work-column" width=200px>
-                            <img src="images/alibaba.png" width=140>
+                        <td class="work-column">
+                            <img src="images/logo-alibaba.png" width=35>
                         </td>
                         <td>
-                            <p style="font-size: 16px">2017.05&mdash;2017.10: Alibaba Engineering Intern</p>
+                            <p class="font" style="font-size: 16px">2017.05&mdash;2017.10: Alibaba Engineering Intern</p>
                         </td>
                     </tr>
                     <tr>
-                        <td class="work-column" width=200px>
-                            <img src="images/whu.png" width=150>
+                        <td class="work-column" width=50>
+                            <img src="images/logo-whu.png" width=35>
                         </td>
                         <td>
-                            <p style="font-size: 16px">2016.05&mdash;2017.2: WHU Research Assistant</p>
+                            <p class="font" style="font-size: 16px">2016.05&mdash;2017.02: Research Assistant at Wuhan University</p>
                         </td>
                     </tr>
                 </table>
@@ -188,7 +199,7 @@
                         </div>
                         <a target="_blank" href="http://cvpr2019.thecvf.com/">CVPR 2019</a>
                         <div class="description">
-                            Wenjie Pei, Jiyuan Zhang, Xiangrong Wang, <b>Lei Ke</b>, Xiaoyong Shen and Yu-wing Tai <br>
+                            Wenjie Pei, Jiyuan Zhang, Xiangrong Wang, <b>Lei Ke</b>, Xiaoyong Shen and Yu-Wing Tai <br>
                         </div>      
                         <div>
                             [<a target="_blank" href='https://arxiv.org/abs/1905.03966'>Paper</a>]
@@ -229,10 +240,7 @@
         <table>
                 <!-- Gobang -->
                 <tr>
-                    <td id="Gobang" class="thumb-column">
-                        <a href="#"><img class="project-thumb" src="images/sus.png"></a>
-                    </td>
-                    <td class="description-column">
+                    <td>
                     <div>
                         <div class="project-title">
                             <b>Monitoring Environmental Quality by Sniffing Social Media</b> 
@@ -244,14 +252,15 @@
                         <div>
                             [<a target="_blank" href="https://www.mdpi.com/2071-1050/9/2/85/htm">Paper</a>]
                         </div>
+                        <div>
+                            <br>
+                        </div>
                     </td>
                 </tr>
                 <!-- Egocentric Vision -->
+
                 <tr>
-                    <td id="Egocentric Vision" class="thumb-column">
-                        <a href="#"><img class="project-thumb" src="images/eu.png"></a>
-                    </td>
-                    <td class="description-column">
+                    <td>
                     <div>
                         <div class="project-title">
                             <b>A hybrid model of sentimental entity recognition on mobile social media</b>
