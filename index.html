@@ -108,6 +108,7 @@
             table.pub_table tr {
                 outline: thin dotted #666666;
             }
+
     </style>
              <style type="text/css">
 p.normal {font-style:normal}
@@ -116,11 +117,46 @@ p.oblique {font-style:oblique}
 p.font {font-family: Georgia, serif;}
 li.font {font-family: Georgia, serif;}
 
+.ul_s {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.li_s {
+  float: left;
+}
+
+.li_s1 {
+  float: left;
+  background-color: grey;
+}
+
+li a1 {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a1:hover {
+  background-color: grey;
+}
+
 </style>
-  </head>
+</head>
   <body>
     <div class="main">
+      <ul class="ul_s">
+      <li class='li_s1'><a href="#home"><a1>Home</a1></a></li>
+      <li class='li_s'><a href="#publications"><a1>Publications</a1></a></li>
+      <li class='li_s'><a href="#misc"><a1>Misc</a1></a></li>
+      </ul>
       <div class="intro">
+        <a name="home"></a>
         <img class="me" src="./image/head.jpg">
                 <!--<h2><span class="name">Lei Ke</span></h2>-->
                 <p class="caption"><b>Lei Ke</b></p>
@@ -182,6 +218,7 @@ li.font {font-family: Georgia, serif;}
             </div>
         <hr>
       <div class="projects">
+        <a name="publications"></a>
         <h3>Recent Publications</h3>
         <div class="projects-table">
         <table>
@@ -334,6 +371,7 @@ li.font {font-family: Georgia, serif;}
             </ul>
             <hr>
             <h3>Misc</h3>
+            <a name="misc"></a>
             <ul>
             <li>Some <a href='https://500px.com/keleiwhu' target="_blank">photography</a> of natural scenery and delicate architecture during my daily life and travelling.</li>
                 </ul>
