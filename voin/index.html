@@ -10,7 +10,7 @@
     </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GSNet: Joint Vehicle Pose and Shape Reconstruction with Geometrical and Scene-aware Supervision</title>
+    <title>Occlusion-Aware Video Object Inpainting</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="css/carousel.css" type="text/css">
@@ -97,25 +97,6 @@
     </section>
 
 
-    <section class="section" id="Abstract">
-      <div class="container content">
-        <div class="columns is-centered">
-          <div class="column is-two-thirds has-text-justified">
-            <h2 class="title is-3">Pipeline</h2>
-            <img src="images/framework.png">
-            <h2 class="title is-3">Abstract</h2>
-            <p>Conventional video inpainting is neither object-oriented nor occlusion-aware, making it liable to obvious artifacts when large occluded object regions are inpainted. This paper presents occlusion-aware video object inpainting, which recovers both the complete shape and appearance for occluded objects in videos given their visible mask segmentation.<br/>
-            <br>
-
-To facilitate this new research, we construct the first large-scale video object inpainting benchmark {\em YouTube-VOI} to provide realistic occlusion scenarios with both occluded and visible object masks available. Our technical contribution VOIN jointly performs video object shape completion and occluded texture generation. In particular, the shape completion module models long-range object coherence while the flow completion module  recovers accurate flow with sharp motion boundary, for propagating temporally-consistent texture to the same moving object across frames. For more realistic results, VOIN is optimized using both T-PatchGAN and a new spatio-temporal attention-based multi-class discriminator.<br/>
-
-            <br>
-Finally, we compare VOIN and strong baselines on YouTube-VOI. Experimental results clearly demonstrate the efficacy of our method including inpainting complex and dynamic objects. VOIN degrades gracefully with inaccurate input visible mask.<br/> 
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
 
 
     <section class="section" id="results">
@@ -124,6 +105,217 @@ Finally, we compare VOIN and strong baselines on YouTube-VOI. Experimental resul
           <div class="column is-two-thirds has-text-justified">
             <h2 class="title is-3">Visualization Results</h2>
             <div class="tile is-ancestor is-vertical">
+
+    <table style="text-align: center;">      
+      <tr>
+          <td align="center">
+              Input
+          </td>
+        
+          <td align="center">
+              STTN (ECCV'20)
+          </td>
+        
+          <td align="center">
+              FGVC (ECCV'20)
+          </td>        
+        
+          <td align="center">
+              VOIN
+          </td>              
+      </tr>      
+     <tr>
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/4-1.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+          </td>
+        
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/4-2.mp4" type="video/mp4">
+            </video>
+          </td>
+        
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/4-5.mp4" type="video/mp4">
+            </video>
+          </td>        
+        
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/4-6.mp4" type="video/mp4">
+            </video>
+          </td>              
+      </tr>             
+      
+
+       <tr>
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/5-1.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+          </td>
+        
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/5-2.mp4" type="video/mp4">
+            </video>
+          </td>
+        
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/5-5.mp4" type="video/mp4">
+            </video>
+          </td>        
+        
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/5-6.mp4" type="video/mp4">
+            </video>
+          </td>              
+      </tr>         
+      
+     <tr>
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/6-1.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+          </td>
+        
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/6-2.mp4" type="video/mp4">
+            </video>
+          </td>
+        
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/6-5.mp4" type="video/mp4">
+            </video>
+          </td>        
+        
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/6-6.mp4" type="video/mp4">
+            </video>
+          </td>              
+      </tr>         
+
+      <tr>
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/7-1.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+          </td>
+        
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/7-2.mp4" type="video/mp4">
+            </video>
+          </td>
+        
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/7-5.mp4" type="video/mp4">
+            </video>
+          </td>        
+        
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/7-6.mp4" type="video/mp4">
+            </video>
+          </td>              
+      </tr>         
+
+      <tr>
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+               <source src="videos/1-1.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+          </td>
+        
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+               <source src="videos/1-2.mp4" type="video/mp4">
+            </video>
+          </td>
+        
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/1-5.mp4" type="video/mp4">
+            </video>
+          </td>        
+        
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/1-6.mp4" type="video/mp4">
+            </video>
+          </td>              
+      </tr>      
+      
+      <tr>
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/2-1.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+          </td>
+        
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/2-2.mp4" type="video/mp4">
+            </video>
+          </td>
+        
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/2-5.mp4" type="video/mp4">
+            </video>
+          </td>        
+        
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/2-6.mp4" type="video/mp4">
+            </video>
+          </td>              
+      </tr>
+      
+      
+     <tr>
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/3-1.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+          </td>
+        
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/3-2.mp4" type="video/mp4">
+            </video>
+          </td>
+        
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/3-5.mp4" type="video/mp4">
+            </video>
+          </td>        
+        
+          <td>
+            <video width="200" height="160" loop="true" autoplay="true" controls muted>
+                <source src="./videos/3-6.mp4" type="video/mp4">
+            </video>
+          </td>              
+      </tr>            
+       
+    </table>
               <!-- <div class="tile is-parent">
                 <div class="tile is-child has-text-vcentered">
                   <video muted controls loop width="100%">
@@ -152,15 +344,35 @@ Finally, we compare VOIN and strong baselines on YouTube-VOI. Experimental resul
                 </div>
               </div> -->
 
-              <div class="tile is-parent">
+              <!--<div class="tile is-parent">
                 <div class="tile is-child has-text-vcentered">
                   <video muted controls loop width="100%">
                     <source src="videos/supp-voin.mp4" type="video/mp4">
                   </video>
                 </div>
-              </div>
+              </div>-->
 
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section" id="Abstract">
+      <div class="container content">
+        <div class="columns is-centered">
+          <div class="column is-two-thirds has-text-justified">
+            <h2 class="title is-3">Pipeline</h2>
+            <img src="images/framework.png">
+            <h2 class="title is-3">Abstract</h2>
+            <p>Conventional video inpainting is neither object-oriented nor occlusion-aware, making it liable to obvious artifacts when large occluded object regions are inpainted. This paper presents occlusion-aware video object inpainting, which recovers both the complete shape and appearance for occluded objects in videos given their visible mask segmentation.<br/>
+            <br>
+
+To facilitate this new research, we construct the first large-scale video object inpainting benchmark {\em YouTube-VOI} to provide realistic occlusion scenarios with both occluded and visible object masks available. Our technical contribution VOIN jointly performs video object shape completion and occluded texture generation. In particular, the shape completion module models long-range object coherence while the flow completion module  recovers accurate flow with sharp motion boundary, for propagating temporally-consistent texture to the same moving object across frames. For more realistic results, VOIN is optimized using both T-PatchGAN and a new spatio-temporal attention-based multi-class discriminator.<br/>
+
+            <br>
+Finally, we compare VOIN and strong baselines on YouTube-VOI. Experimental results clearly demonstrate the efficacy of our method including inpainting complex and dynamic objects. VOIN degrades gracefully with inaccurate input visible mask.<br/> 
+            </p>
           </div>
         </div>
       </div>
