@@ -402,10 +402,10 @@ Finally, we compare VOIN and strong baselines on YouTube-VOI. Experimental resul
             <p>YouTube-VOI benchmark contains 5,305 videos (4,774 for training and 531 for evaluation) with resolution higher than 640x480, a 65-category label set including common objects such as people, animals and vehicles, and over 2 million occluded and visible masks.<br/>
             <br>
             The mask annotation folders under each video object:<br/>
-            &nbsp&nbsp&nbsp&nbsp<b>full_mask</b>: the sequential complete mask of an interested video object (modal annotations).<br/>
-            &nbsp&nbsp&nbsp&nbsp<b>occ_mask</b>: the sequential invisible (occluded part) mask of an interested video object.<br/>
-            &nbsp&nbsp&nbsp&nbsp<b>occ_mask_full</b>: the sequential complete mask of the video occluder object.<br/>
-            &nbsp&nbsp&nbsp&nbsp<b>remain_mask</b>: the sequential visible (remaning part) mask of an interested video object.<br/>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<b>1) full_mask</b>: the sequential complete mask of an interested video object (occludee, modal annotations).<br/>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<b>2) occ_mask</b>: the sequential invisible (occluded part) mask of an interested video object.<br/>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<b>3) occ_mask_full</b>: the sequential complete mask of the video occluder object.<br/>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<b>4) remain_mask</b>: the sequential visible (remaning part) mask of an interested video object.<br/>
             </p>
           </div>
         </div>
