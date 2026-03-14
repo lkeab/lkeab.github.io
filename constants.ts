@@ -14,7 +14,7 @@ export const PROFILE = {
   email: "keleiwhu [at] gmail.com", 
   googleScholarId: "WseeNrUAAAAJ", 
   citationCount: "3549", // Fallback if live fetch fails
-  bio: `I am a Senior Research Scientist in {{LINK|Tencent AI, Seattle Lab|https://www.tencent.com/en-us/index.html}}. My primary research interest lies in building multimodal foundation systems, especially the visual understanding, reasoning, and generation. 
+  bio: `I am a Senior Research Scientist in {{LINK|Tencent AI, Seattle Lab|https://www.tencent.com/en-us/index.html}}. My primary research interest lies in building multimodal foundation systems, especially the visual understanding, reasoning, and action. 
   
   Previously, I worked as a Postdoctoral Research Associate at Computer Science of {{LINK|Carnegie Mellon University|https://www.ml.cmu.edu/}} with {{LINK|Katerina Fragkiadaki|https://www.cs.cmu.edu/~katef/}} and in the Computer Vision Lab of {{LINK|ETH Zurich|https://ethz.ch/en.html}}. I obtained my Ph.D. degree from {{LINK|CSE Department|https://www.cse.ust.hk/}} at {{LINK|HKUST|https://www.ust.hk/}} in mid 2023, supervised by {{LINK|Chi-Keung Tang|http://home.cse.ust.hk/~cktang/bio.html}} and {{LINK|Yu-Wing Tai|https://yuwingtai.github.io/}}. During the PhD journey, I also spent two years as a visiting scholar at ETH Zurich. I received my B.E. degree from the school of computer science at {{LINK|Wuhan University|https://en.wikipedia.org/wiki/Wuhan_University}}. My algorithm is integrated into the {{LINK|Hugging Face library|https://huggingface.co/docs/transformers/main/model_doc/sam_hq}}, and my opensource projects obtain over {{BOLD|10K+ GitHub stars}}.`, 
   avatarUrl: "image/kelei_portrait_small_new.png", 
@@ -29,6 +29,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
 ];
 
 export const NEWS: NewsItem[] = [
+  { id: 'n0', date: "2026.03", content: "We released Penguin-VL, a compact yet strong VLM with an LLM-initialized vision encoder.", link: "https://penguin-vl.github.io/" },
   { id: 'n1', date: "2025.08", content: "We are organizing workshop Generating Digital Twins from Images and Videos at ICCV 2025.", link: "https://awesomedigitaltwin.github.io/2025_ICCV.html" },
   { id: 'n2', date: "2025.08", content: "I will serve as an Area Chair at ICLR 2026." },
   { id: 'n3', date: "2025.03", content: "I will serve as an Area Chair at NeurIPS 2025." },
