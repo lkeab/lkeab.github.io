@@ -1,4 +1,5 @@
 
+
 import { Publication, NewsItem, Experience, Award, SocialLink, Author, ProfessionalActivity } from './types';
 
 // --- Helper to easily create authors ---
@@ -11,18 +12,20 @@ export const PROFILE = {
   affiliation: "Tencent AI Seattle",
   university: "", 
   email: "keleiwhu [at] gmail.com", 
+  googleScholarId: "WseeNrUAAAAJ", 
+  citationCount: "3549", // Fallback if live fetch fails
   bio: `I am a Senior Research Scientist in {{LINK|Tencent AI, Seattle Lab|https://www.tencent.com/en-us/index.html}}. My primary research interest lies in building multimodal foundation systems, especially the visual understanding, reasoning, and generation. 
   
-  Previously, I worked as a Postdoctoral Research Associate at Computer Science of {{LINK|Carnegie Mellon University|https://www.ml.cmu.edu/}} with {{LINK|Katerina Fragkiadaki|https://www.cs.cmu.edu/~katef/}} and in the Computer Vision Lab of {{LINK|ETH Zurich|https://ethz.ch/en.html}}. I obtained my Ph.D. degree from {{LINK|CSE Department|https://www.cse.ust.hk/}} at {{LINK|HKUST|https://www.ust.hk/}} in mid 2023, supervised by {{LINK|Chi-Keung Tang|http://home.cse.ust.hk/~cktang/bio.html}} and {{LINK|Yu-Wing Tai|https://yuwingtai.github.io/}}. During the PhD journey, I also spent two years as a visiting scholar at ETH Zurich. I received my B.E. degree from the school of computer science at {{LINK|Wuhan University|https://en.wikipedia.org/wiki/Wuhan_University}}. My opensource projects obtains over 10K+ GitHub stars.`,
-  avatarUrl: "image/kelei_portrait_small.jpg", 
+  Previously, I worked as a Postdoctoral Research Associate at Computer Science of {{LINK|Carnegie Mellon University|https://www.ml.cmu.edu/}} with {{LINK|Katerina Fragkiadaki|https://www.cs.cmu.edu/~katef/}} and in the Computer Vision Lab of {{LINK|ETH Zurich|https://ethz.ch/en.html}}. I obtained my Ph.D. degree from {{LINK|CSE Department|https://www.cse.ust.hk/}} at {{LINK|HKUST|https://www.ust.hk/}} in mid 2023, supervised by {{LINK|Chi-Keung Tang|http://home.cse.ust.hk/~cktang/bio.html}} and {{LINK|Yu-Wing Tai|https://yuwingtai.github.io/}}. During the PhD journey, I also spent two years as a visiting scholar at ETH Zurich. I received my B.E. degree from the school of computer science at {{LINK|Wuhan University|https://en.wikipedia.org/wiki/Wuhan_University}}. My algorithm is integrated into the {{LINK|Hugging Face library|https://huggingface.co/docs/transformers/main/model_doc/sam_hq}}, and my opensource projects obtain over {{BOLD|10K+ GitHub stars}}.`, 
+  avatarUrl: "image/kelei_portrait_small_new.png", 
   location: "Seattle, WA"
 };
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  { platform: "Google Scholar", url: "https://scholar.google.com/citations?user=WseeNrUAAAAJ&hl=en", icon: "scholar" },
+  { platform: "Email", url: "mailto:keleiwhu@gmail.com", icon: "email" },
+  { platform: "Google Scholar", url: "https://scholar.google.com/citations?user=WseeNrUAAAAJ", icon: "scholar" },
   { platform: "GitHub", url: "https://github.com/lkeab/", icon: "github" },
   { platform: "Twitter/X", url: "https://x.com/leike_lk/", icon: "twitter" },
-  { platform: "Email", url: "mailto:keleiwhu@gmail.com", icon: "email" },
 ];
 
 export const NEWS: NewsItem[] = [
@@ -56,10 +59,84 @@ export const NEWS: NewsItem[] = [
   { id: 'n28', date: "2019.02", content: "Our paper on video captioning accepted by CVPR 2019." }
 ];
 
+const CATEGORY_VLM = "Vision and Language Models";
 const CATEGORY_SEGMENTATION = "Segmentation and Tracking";
 const CATEGORY_3D = "3D Reconstruction, Tracking and Generation";
 
 export const PUBLICATIONS: Publication[] = [
+  // --- Vision Language Models ---
+  {
+    id: 'new0',
+    title: "Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders",
+    authors: [coAuthor("Boqiang Zhang"), me, coAuthor("Ruihan Yang"), coAuthor("Qi Gao"), coAuthor("Tianyuan Qu"), coAuthor("Rossell Chen"), coAuthor("Dong Yu"), coAuthor("Leoweiliang")],
+    venue: "arXiv 2026",
+    year: 2026,
+    abstract: "Penguin-VL studies compact 2B/8B multimodal models {{BOLD|with an LLM-initialized vision encoder}}, improving visual fidelity, document understanding, visual knowledge, and long-video reasoning.",
+    tags: ["VLM", "Vision Encoder", "Efficient Multimodal Reasoning"],
+    category: CATEGORY_VLM,
+    links: {
+      pdf: "https://arxiv.org/pdf/2603.06569",
+      arxiv: "https://arxiv.org/abs/2603.06569",
+      code: "https://github.com/tencent-ailab/Penguin-VL",
+      projectPage: "https://penguin-vl.github.io/",
+      huggingface: "https://huggingface.co/tencent/Penguin-VL-8B"
+    },
+    githubRepo: "tencent-ailab/Penguin-VL",
+    thumbnail: "images/penguin_vl.png"
+  },
+  {
+    id: 'new1',
+    title: "N3D-VLM: Native 3D Grounding Enables Accurate Spatial Reasoning in Vision-Language Models",
+    authors: [coAuthor("Yuxin Wang"), me, coAuthor("Boqiang Zhang"), coAuthor("Tianyuan Qu"), coAuthor("Hanxun Yu"), coAuthor("Zhenpeng Huang"), coAuthor("Meng Yu"), coAuthor("Dan Xu"), coAuthor("Dong Yu")],
+    venue: "arXiv 2025",
+    year: 2025,
+    abstract: "We present N3D-VLM, a framework that empowers native 3D grounding to enable accurate spatial reasoning in Vision-Language Models.",
+    tags: ["VLM", "3D Grounding", "Spatial Reasoning"],
+    category: CATEGORY_VLM,
+    links: { 
+      pdf: "https://arxiv.org/abs/2512.16561",
+      code: "https://github.com/W-Ted/N3D-VLM",
+      projectPage: "https://n3d-vlm.github.io/"
+    },
+    githubRepo: "W-Ted/N3D-VLM",
+    thumbnail: "images/n3d_vlm.png" 
+  },
+  {
+    id: 'new2',
+    title: "RePlan: Reasoning-Guided Region Planning for Complex Instruction-Based Image Editing",
+    authors: [coAuthor("Tianyuan Qu"), me, coAuthor("Xiaohang Zhan"), coAuthor("Longxiang Tang"), coAuthor("Yuqi Liu"), coAuthor("Bohao Peng"), coAuthor("Bei Yu"), coAuthor("Dong Yu"), coAuthor("Jiaya Jia")],
+    venue: "arXiv 2025",
+    year: 2025,
+    abstract: "RePlan introduces a reasoning-guided region planning mechanism for complex instruction-based image editing, ensuring precise adherence to spatial and semantic constraints.",
+    tags: ["Image Editing", "VLM", "Reasoning"],
+    category: CATEGORY_VLM,
+    links: { 
+      pdf: "https://arxiv.org/abs/2512.16864",
+      code: "https://github.com/JIA-Lab-research/RePlan",
+      projectPage: "https://replan-iv-edit.github.io/#" 
+    },
+    githubRepo: "JIA-Lab-research/RePlan",
+    thumbnail: "images/replan.jpg"
+  },
+  {
+    id: 'new3',
+    title: "MotionEdit: Benchmarking and Learning Motion-Centric Image Editing",
+    authors: [coAuthor("Yixin Wan"), me, coAuthor("Wenhao Yu"), coAuthor("Kai-Wei Chang"), coAuthor("Dong Yu")],
+    venue: "arXiv 2025",
+    year: 2025,
+    abstract: "MotionEdit establishes a benchmark and learning framework for motion-centric image editing tasks.",
+    tags: ["Image Editing", "Motion", "Benchmark"],
+    category: CATEGORY_VLM,
+    links: { 
+      pdf: "https://arxiv.org/abs/2512.10284",
+      code: "https://github.com/elainew728/motion-edit",
+      projectPage: "https://motion-edit.github.io/" 
+    },
+    githubRepo: "elainew728/motion-edit",
+    thumbnail: "images/motion_nft.png"
+  },
+   
+  // --- Segmentation and Tracking ---
   {
     id: 'p1',
     title: "Segment Anything in High Quality",
@@ -185,6 +262,8 @@ export const PUBLICATIONS: Publication[] = [
     githubRepo: "lkeab/BCNet",
     thumbnail: "images/cvpr2021_bcn.png"
   },
+  
+  // --- 3D Reconstruction, Tracking and Generation ---
   {
     id: 'p8',
     title: "TAPIP3D: Tracking Any Point in Persistent 3D Geometry",
@@ -309,10 +388,6 @@ export const AWARDS: Award[] = [
   { id: 'a4', year: "2019", title: "Research Travel Grant, HKUST" },
   { id: 'a5', year: "2019-Now", title: "Postgraduate Studentship, HKUST" },
   { id: 'a6', year: "2017", title: "COMAP's Mathematical Contest in Modeling, Honorable prize" },
-  { id: 'a7', year: "2015-2017", title: "Excellent Student Scholarship, Wuhan University" },
-  { id: 'a8', year: "2016", title: "National Software Design Competition, Second Prize" },
-  { id: 'a9', year: "2016", title: "National Inspirational Scholarship, Wuhan University" },
-  { id: 'a10', year: "2015", title: "National College Students' Mathematics Competition, Third Prize" }
 ];
 
 export const ACTIVITIES: ProfessionalActivity[] = [

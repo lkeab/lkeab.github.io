@@ -9,30 +9,37 @@ interface PublicationItemProps {
 
 const PublicationItem: React.FC<PublicationItemProps> = ({ pub }) => {
   
-  // Function to parse abstract and render special highlighted links
+  // Parse abstract markers like {{LINK|text|url}} and {{BOLD|text}}.
   const renderAbstract = (abstract: string) => {
-    const linkRegex = /{{LINK\|(.*?)\|(.*?)}}/;
-    const match = abstract.match(linkRegex);
-    
-    if (match) {
-      const [fullMatch, text, url] = match;
-      const parts = abstract.split(fullMatch);
-      return (
-        <>
-          {parts[0]}
-          <a 
-            href={url} 
-            target="_blank" 
+    const parts = abstract.split(/({{LINK\|.*?\|.*?}}|{{BOLD\|.*?}})/);
+
+    return parts.map((part, index) => {
+      const linkMatch = part.match(/{{LINK\|(.*?)\|(.*?)}}/);
+      if (linkMatch) {
+        return (
+          <a
+            key={index}
+            href={linkMatch[2]}
+            target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 font-bold hover:underline"
           >
-            {text}
+            {linkMatch[1]}
           </a>
-          {parts[1]}
-        </>
-      );
-    }
-    return abstract;
+        );
+      }
+
+      const boldMatch = part.match(/{{BOLD\|(.*?)}}/);
+      if (boldMatch) {
+        return (
+          <strong key={index} className="font-semibold text-gray-900">
+            {boldMatch[1]}
+          </strong>
+        );
+      }
+
+      return part;
+    });
   };
 
   return (
