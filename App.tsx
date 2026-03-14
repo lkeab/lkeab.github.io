@@ -67,6 +67,7 @@ const renderTextWithLinks = (text: string) => {
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>(SectionId.HOME);
   const [scrolled, setScrolled] = useState(false);
+  const [scholarCitationCount, setScholarCitationCount] = useState(PROFILE.citationCount);
 
   // Handle scroll for navbar styling and scrollspy
   useEffect(() => {
@@ -119,8 +120,28 @@ const App: React.FC = () => {
   const recentCategories = ["Vision and Language Models"];
   const selectedCategories = ["Segmentation and Tracking", "3D Reconstruction, Tracking and Generation"];
   const scholarProfileUrl = `https://scholar.google.com/citations?user=${PROFILE.googleScholarId}&hl=en`;
-  const scholarBadgeDataUrl = encodeURIComponent('https://raw.githubusercontent.com/lkeab/lkeab.github.io/main/google-scholar-stats/gs_data_shieldsio.json');
-  const scholarBadgeUrl = `https://img.shields.io/endpoint?url=${scholarBadgeDataUrl}&logo=Google%20Scholar&style=flat`;
+  const scholarBadgeDataUrl = 'https://raw.githubusercontent.com/lkeab/lkeab.github.io/main/google-scholar-stats/gs_data_shieldsio.json';
+
+  useEffect(() => {
+    const fetchScholarBadge = async () => {
+      try {
+        const response = await fetch(scholarBadgeDataUrl, { cache: 'no-store' });
+        if (!response.ok) {
+          throw new Error('Failed to fetch scholar badge data');
+        }
+
+        const data = await response.json();
+        const count = String(data?.message ?? '').replace(/[^\d]/g, '');
+        if (count) {
+          setScholarCitationCount(count);
+        }
+      } catch (error) {
+        console.error('Failed to load scholar badge data:', error);
+      }
+    };
+
+    fetchScholarBadge();
+  }, [scholarBadgeDataUrl]);
 
   // Mapping social icons to our filled custom components
   const getProfileIcon = (iconName: string) => {
@@ -274,11 +295,15 @@ const App: React.FC = () => {
               aria-label="Google Scholar citations"
               className="self-start transition-transform hover:-translate-y-0.5 sm:self-auto"
             >
-              <img
-                src={scholarBadgeUrl}
-                alt="Google Scholar Citations badge"
-                className="h-10 w-auto"
-              />
+              <span className="inline-flex overflow-hidden rounded-lg border border-gray-200 shadow-sm">
+                <span className="flex items-center gap-2 bg-[#f6f6f6] px-3 py-1.5 text-sm font-medium text-gray-700">
+                  <img src="image/icon/scholar.png" alt="" className="h-4 w-4" />
+                  <span>Google Scholar Citations</span>
+                </span>
+                <span className="flex min-w-[72px] items-center justify-center bg-[#99ccff] px-3 py-1.5 text-xl font-medium text-gray-800">
+                  {scholarCitationCount}
+                </span>
+              </span>
             </a>
           </div>
 
