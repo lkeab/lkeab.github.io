@@ -67,7 +67,6 @@ const renderTextWithLinks = (text: string) => {
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>(SectionId.HOME);
   const [scrolled, setScrolled] = useState(false);
-  const [scholarCitationCount, setScholarCitationCount] = useState(PROFILE.citationCount);
 
   // Handle scroll for navbar styling and scrollspy
   useEffect(() => {
@@ -119,29 +118,6 @@ const App: React.FC = () => {
 
   const recentCategories = ["Vision and Language Models"];
   const selectedCategories = ["Segmentation and Tracking", "3D Reconstruction, Tracking and Generation"];
-  const scholarProfileUrl = `https://scholar.google.com/citations?user=${PROFILE.googleScholarId}&hl=en`;
-  const scholarBadgeDataUrl = 'https://raw.githubusercontent.com/lkeab/lkeab.github.io/main/google-scholar-stats/gs_data_shieldsio.json';
-
-  useEffect(() => {
-    const fetchScholarBadge = async () => {
-      try {
-        const response = await fetch(scholarBadgeDataUrl, { cache: 'no-store' });
-        if (!response.ok) {
-          throw new Error('Failed to fetch scholar badge data');
-        }
-
-        const data = await response.json();
-        const count = String(data?.message ?? '').replace(/[^\d]/g, '');
-        if (count) {
-          setScholarCitationCount(count);
-        }
-      } catch (error) {
-        console.error('Failed to load scholar badge data:', error);
-      }
-    };
-
-    fetchScholarBadge();
-  }, [scholarBadgeDataUrl]);
 
   // Mapping social icons to our filled custom components
   const getProfileIcon = (iconName: string) => {
@@ -286,25 +262,8 @@ const App: React.FC = () => {
 
         {/* Recent Works Section */}
         <section id={SectionId.RECENT_WORKS} className="mb-24 scroll-mt-28">
-          <div className="mb-6 flex flex-col gap-3 border-b border-gray-200 pb-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-wrap items-center gap-4 mb-6 border-b border-gray-200 pb-4">
             <h2 className="text-2xl font-bold text-gray-900 uppercase tracking-wider mr-2">Recent Works</h2>
-            <a
-              href={scholarProfileUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Google Scholar citations"
-              className="self-start transition-transform hover:-translate-y-0.5 sm:self-auto"
-            >
-              <span className="inline-flex overflow-hidden rounded-lg border border-gray-200 shadow-sm">
-                <span className="flex items-center gap-2 bg-[#f6f6f6] px-3 py-1.5 text-sm font-medium text-gray-700">
-                  <img src="image/icon/scholar.png" alt="" className="h-4 w-4" />
-                  <span>Google Scholar Citations</span>
-                </span>
-                <span className="flex min-w-[72px] items-center justify-center bg-[#99ccff] px-3 py-1.5 text-xl font-medium text-gray-800">
-                  {scholarCitationCount}
-                </span>
-              </span>
-            </a>
           </div>
 
           <div className="flex flex-col space-y-16">
