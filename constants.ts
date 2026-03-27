@@ -9,12 +9,12 @@ const coAuthor = (name: string, note?: string): Author => ({ name, isMe: false, 
 export const PROFILE = {
   name: "Lei Ke",
   title: "Senior Researcher",
-  affiliation: "Tencent AI Seattle",
+  affiliation: "Tencent Hunyuan LLM",
   university: "", 
   email: "keleiwhu [at] gmail.com", 
   googleScholarId: "WseeNrUAAAAJ", 
   citationCount: "3549", // Fallback if live fetch fails
-  bio: `I am a Senior Research Scientist in {{LINK|Tencent AI, Seattle Lab|https://www.tencent.com/en-us/index.html}}. My primary research interest lies in building multimodal foundation systems, especially the visual understanding, reasoning, and action. 
+  bio: `I am a Senior Research Scientist in {{LINK|Tencent Hunyuan LLM (Seattle)|https://www.tencent.com/en-us/index.html}}. My primary research interest lies in building multimodal foundation systems, especially the visual understanding, reasoning, and action. 
   
   Previously, I worked as a Postdoctoral Research Associate at Computer Science of {{LINK|Carnegie Mellon University|https://www.ml.cmu.edu/}} with {{LINK|Katerina Fragkiadaki|https://www.cs.cmu.edu/~katef/}} and in the Computer Vision Lab of {{LINK|ETH Zurich|https://ethz.ch/en.html}}. I obtained my Ph.D. degree from {{LINK|CSE Department|https://www.cse.ust.hk/}} at {{LINK|HKUST|https://www.ust.hk/}} in mid 2023, supervised by {{LINK|Chi-Keung Tang|http://home.cse.ust.hk/~cktang/bio.html}} and {{LINK|Yu-Wing Tai|https://yuwingtai.github.io/}}. During the PhD journey, I also spent two years as a visiting scholar at ETH Zurich. I received my B.E. degree from the school of computer science at {{LINK|Wuhan University|https://en.wikipedia.org/wiki/Wuhan_University}}. My algorithm is integrated into the {{LINK|Hugging Face library|https://huggingface.co/docs/transformers/main/model_doc/sam_hq}}, and my opensource projects obtain over {{BOLD|10K+ GitHub stars}}.`, 
   avatarUrl: "image/kelei_portrait_small_new.png", 
@@ -321,7 +321,7 @@ export const EXPERIENCES: Experience[] = [
   {
     id: 'e0',
     role: "Senior Research Scientist",
-    institution: "Tencent AI Seattle",
+    institution: "Tencent Hunyuan LLM",
     period: "2025.03 — Current",
     description: "",
     logo: "https://avatars.githubusercontent.com/u/54961825?v=4"
