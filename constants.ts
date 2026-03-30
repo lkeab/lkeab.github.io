@@ -394,7 +394,7 @@ export const AWARDS: Award[] = [
 export const ACTIVITIES: ProfessionalActivity[] = [
   {
     category: "Area Chair",
-    items: ["NeurIPS 2025", "ICLR 2026"]
+    items: ["NeurIPS 2025", "ICLR 2026", "NeurIPS 2026"]
   },
   {
     category: "Conference Review",
