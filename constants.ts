@@ -104,6 +104,22 @@ export const PUBLICATIONS: Publication[] = [
     thumbnail: "images/n3d_vlm.png" 
   },
   {
+    id: 'new_mssr',
+    title: "Stable and Efficient Single-Rollout RL for Multimodal Reasoning",
+    authors: [coAuthor("Rui Liu"), coAuthor("Dian Yu"), me, coAuthor("Haolin Liu"), coAuthor("Yujun Zhou"), coAuthor("Zhenwen Liang"), coAuthor("Haitao Mi"), coAuthor("Pratap Tokekar"), coAuthor("Dong Yu")],
+    venue: "CVPR 2026",
+    year: 2026,
+    abstract: "MSSR stabilizes single-rollout RL for multimodal reasoning, matching group-based validation performance with half the training steps and improving generalization across five reasoning-intensive benchmarks.",
+    tags: ["Multimodal Reasoning", "RLVR", "Efficient Training"],
+    category: CATEGORY_VLM,
+    links: {
+      pdf: "https://arxiv.org/pdf/2512.18215",
+      arxiv: "https://arxiv.org/abs/2512.18215",
+      projectPage: "https://mssr-proj.github.io/"
+    },
+    thumbnail: "images/mssr_cvpr2026.jpg"
+  },
+  {
     id: 'new2',
     title: "RePlan: Reasoning-Guided Region Planning for Complex Instruction-Based Image Editing",
     authors: [coAuthor("Tianyuan Qu"), me, coAuthor("Xiaohang Zhan"), coAuthor("Longxiang Tang"), coAuthor("Yuqi Liu"), coAuthor("Bohao Peng"), coAuthor("Bei Yu"), coAuthor("Dong Yu"), coAuthor("Jiaya Jia")],

@@ -2,6 +2,7 @@
 export enum SectionId {
   HOME = 'home',
   NEWS = 'news',
+  RECENT_WORKS = 'recent_works',
   PUBLICATIONS = 'publications',
   EXPERIENCE = 'experience',
   AWARDS = 'awards',
