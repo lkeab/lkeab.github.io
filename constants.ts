@@ -87,6 +87,25 @@ export const PUBLICATIONS: Publication[] = [
     thumbnail: "images/penguin_vl.png"
   },
   {
+    id: 'new_depthvlm',
+    title: "Unlocking Dense Metric Depth Estimation in VLMs",
+    authors: [coAuthor("Hanxun Yu", "*"), coAuthor("Xuan Qu", "*"), coAuthor("Yuxin Wang"), coAuthor("Jianke Zhu"), me],
+    venue: "arXiv 2026",
+    year: 2026,
+    abstract: "DepthVLM equips a single VLM with a lightweight depth head to predict full-resolution metric depth maps alongside language outputs, preserving multimodal understanding while improving 3D spatial reasoning.",
+    tags: ["VLM", "Metric Depth", "3D Reasoning"],
+    category: CATEGORY_VLM,
+    links: {
+      pdf: "https://arxiv.org/pdf/2605.15876",
+      arxiv: "https://arxiv.org/abs/2605.15876",
+      code: "https://github.com/hanxunyu/DepthVLM",
+      projectPage: "https://depthvlm.github.io/",
+      huggingface: "https://huggingface.co/JonnyYu828/DepthVLM-4B"
+    },
+    githubRepo: "hanxunyu/DepthVLM",
+    thumbnail: "images/depthvlm_pipeline.png"
+  },
+  {
     id: 'new1',
     title: "N3D-VLM: Native 3D Grounding Enables Accurate Spatial Reasoning in Vision-Language Models",
     authors: [coAuthor("Yuxin Wang"), me, coAuthor("Boqiang Zhang"), coAuthor("Tianyuan Qu"), coAuthor("Hanxun Yu"), coAuthor("Zhenpeng Huang"), coAuthor("Meng Yu"), coAuthor("Dan Xu"), coAuthor("Dong Yu")],
