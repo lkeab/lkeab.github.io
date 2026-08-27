@@ -61,7 +61,7 @@ export const NEWS: NewsItem[] = [
   { id: 'n29', date: "2019.02", content: "Our paper on video captioning accepted by CVPR 2019." }
 ];
 
-const CATEGORY_VLM = "Vision and Language Models";
+const CATEGORY_VLM = "VLM and Agentic LLMs";
 const CATEGORY_SEGMENTATION = "Segmentation and Tracking";
 const CATEGORY_3D = "3D Reconstruction, Tracking and Generation";
 

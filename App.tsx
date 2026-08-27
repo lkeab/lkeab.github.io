@@ -116,7 +116,7 @@ const App: React.FC = () => {
     return acc;
   }, {} as Record<string, Publication[]>);
 
-  const recentCategories = ["Vision and Language Models"];
+  const recentCategories = ["VLM and Agentic LLMs"];
   const selectedCategories = ["Segmentation and Tracking", "3D Reconstruction, Tracking and Generation"];
 
   // Mapping social icons to our filled custom components
