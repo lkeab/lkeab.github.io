@@ -150,6 +150,11 @@ const PublicationItem: React.FC<PublicationItemProps> = ({ pub }) => {
               <Smile size={14} className="text-yellow-500" /> HuggingFace
             </a>
           )}
+          {pub.links.huggingfaceGguf && (
+            <a href={pub.links.huggingfaceGguf} className="flex items-center gap-1.5 text-xs font-medium text-gray-700 hover:text-blue-600 transition-colors border border-gray-200 bg-white hover:border-blue-300 rounded px-2.5 py-1.5 shadow-sm">
+              <Smile size={14} className="text-yellow-500" /> GGUF
+            </a>
+          )}
         </div>
       </div>
     </div>

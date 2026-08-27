@@ -68,6 +68,26 @@ const CATEGORY_3D = "3D Reconstruction, Tracking and Generation";
 export const PUBLICATIONS: Publication[] = [
   // --- Vision Language Models ---
   {
+    id: 'new_ui_mate',
+    title: "UI-Mate: Advancing Open-Weight Foundation GUI Agents with In-Context Demonstrations",
+    authors: [coAuthor("Zihan Ding"), coAuthor("Longxu Dou"), coAuthor("Qi Gao"), coAuthor("Xiangwu Guo"), coAuthor("Shengchao Hu"), coAuthor("Zilong Huang"), coAuthor("Zihang Jiang"), me, coAuthor("Mengcheng Lan"), coAuthor("Weixian Lei"), coAuthor("Hanxuan Li"), coAuthor("Honglin Li"), coAuthor("Xiyun Li"), coAuthor("Zaitang Li"), coAuthor("Leowei Liang"), coAuthor("Xin Luo"), coAuthor("Haozhe Ma"), coAuthor("Jiayi Mao"), coAuthor("Zhoujie Pan"), coAuthor("Can Qin"), coAuthor("Tianyuan Qu"), coAuthor("Weiqi Wang"), coAuthor("Wenkai Wang"), coAuthor("Yonglin Wang"), coAuthor("Yuxin Wang"), coAuthor("Chenxu Wu"), coAuthor("Yingchen Yu"), coAuthor("Chenyu Zhang"), coAuthor("Yuhao Zheng")],
+    venue: "arXiv 2026",
+    year: 2026,
+    abstract: "UI-Mate is an open-weight foundation GUI agent that combines environment-grounded training with in-context demonstrations, achieving strong general computer-use performance while using a single demonstration to improve long-horizon reliability.",
+    tags: ["GUI Agent", "Computer Use", "In-Context Demonstrations"],
+    category: CATEGORY_VLM,
+    links: {
+      pdf: "https://arxiv.org/pdf/2608.15930",
+      arxiv: "https://arxiv.org/abs/2608.15930",
+      code: "https://github.com/Tencent/UI-Mate",
+      projectPage: "https://ui-mate.github.io/",
+      huggingface: "https://huggingface.co/collections/tencent/ui-mate",
+      huggingfaceGguf: "https://huggingface.co/bartowski/tencent_UI-Mate-9B-GGUF"
+    },
+    githubRepo: "Tencent/UI-Mate",
+    thumbnail: "images/ui_mate_teaser.png"
+  },
+  {
     id: 'new0',
     title: "Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders",
     authors: [coAuthor("Boqiang Zhang"), me, coAuthor("Ruihan Yang"), coAuthor("Qi Gao"), coAuthor("Tianyuan Qu"), coAuthor("Rossell Chen"), coAuthor("Dong Yu"), coAuthor("Leoweiliang")],

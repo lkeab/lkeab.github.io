@@ -37,6 +37,7 @@ export interface Publication {
     website?: string;
     zhihu?: string; // Added support for Zhihu links
     huggingface?: string; // Added support for HF
+    huggingfaceGguf?: string;
   };
   thumbnail?: string;
   githubRepo?: string; // Format: "User/Repo" for ghbtns.com iframe
