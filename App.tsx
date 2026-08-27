@@ -270,7 +270,7 @@ const App: React.FC = () => {
             {recentCategories.map(category => (
               groupedPublications[category] && (
                 <div key={category}>
-                  <h3 className="text-xl font-bold text-gray-800 mb-6 pl-3 border-l-4 border-blue-600 uppercase tracking-wide">
+                  <h3 className="text-xl font-bold text-gray-800 mb-6 pl-3 border-l-4 border-blue-600 tracking-wide">
                     {category}
                   </h3>
                   <div className="space-y-2">
