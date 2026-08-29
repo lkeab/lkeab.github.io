@@ -29,6 +29,8 @@ export const SOCIAL_LINKS: SocialLink[] = [
 ];
 
 export const NEWS: NewsItem[] = [
+  { id: 'n30', date: "2026.08", content: "We released UI-Mate, a GUI agent model with strong general computer-use performance, receiving over 80K downloads in just 10 days.", link: "https://huggingface.co/bartowski/tencent_UI-Mate-9B-GGUF" },
+  { id: 'n31', date: "2026.08", content: "I will serve as an Area Chair at ICLR 2027." },
   { id: 'n0', date: "2026.04", content: "I will serve as an Area Chair at NeurIPS 2026." },
   { id: 'n1', date: "2026.03", content: "We released Penguin-VL, a compact yet strong VLM with an LLM-initialized vision encoder.", link: "https://penguin-vl.github.io/" },
   { id: 'n2', date: "2025.08", content: "We are organizing workshop Generating Digital Twins from Images and Videos at ICCV 2025.", link: "https://awesomedigitaltwin.github.io/2025_ICCV.html" },
