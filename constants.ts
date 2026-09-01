@@ -90,6 +90,34 @@ export const PUBLICATIONS: Publication[] = [
     thumbnail: "images/ui_mate_teaser.png"
   },
   {
+    id: 'new_recursive_synthesis',
+    title: "Recursive Synthesis for Long-Horizon Terminal Tasks",
+    authors: [
+      coAuthor("Zhongzhi Li", "*"),
+      coAuthor("Yucheng Shi", "*\u2020"),
+      coAuthor("Zongxia Li", "*"),
+      coAuthor("Ruhan Wang"),
+      coAuthor("Anhao Li", "\u2020"),
+      coAuthor("Zixun Huang"),
+      coAuthor("Junyao Yang"),
+      me,
+      coAuthor("Ninghao Liu"),
+      coAuthor("Haitao Mi"),
+      coAuthor("Leowei Liang")
+    ],
+    venue: "arXiv 2026",
+    year: 2026,
+    abstract: "Recursive Synthetic Terminal Tasks (RST) scales long-horizon terminal-agent data through recursive, sandbox-verified synthesis, producing {{BOLD|37,484 tasks at roughly $0.05 each}} and improving Qwen3.5 agents through supervised fine-tuning and reinforcement learning.",
+    tags: ["Terminal Agents", "Data Synthesis", "Long-Horizon Reasoning"],
+    category: CATEGORY_VLM,
+    links: {
+      pdf: "https://arxiv.org/pdf/2608.05466",
+      projectPage: "https://zhongzhi660.github.io/recursive-verified-synthesis-site/?case=jobs-diff-01-3341b098",
+      huggingface: "https://huggingface.co/collections/Zhongzhi1228/recursive-synthesis-for-long-horizon-terminal-tasks"
+    },
+    thumbnail: "images/recursive_synthesis_figure1.png"
+  },
+  {
     id: 'new0',
     title: "Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders",
     authors: [coAuthor("Boqiang Zhang"), me, coAuthor("Ruihan Yang"), coAuthor("Qi Gao"), coAuthor("Tianyuan Qu"), coAuthor("Rossell Chen"), coAuthor("Dong Yu"), coAuthor("Leoweiliang")],
