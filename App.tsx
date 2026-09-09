@@ -215,14 +215,10 @@ const App: React.FC = () => {
                 {renderTextWithLinks(PROFILE.bio)}
               </div>
 
-              <p className="text-red-600 font-bold mt-4 mb-6">
-                I am hiring full-time employees and student interns for the multi-modal foundation models. Please contact me by email if you are interested.
-              </p>
-
               {/* Quick Stats / Badges */}
               <div className="mt-8 flex flex-wrap gap-3">
                  <span className="bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-bold border border-blue-100">
-                   Multimodal Foundation Models
+                   Agentic LLM post-training
                  </span>
                  <span className="bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-bold border border-blue-100">
                    Visual Reasoning

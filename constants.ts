@@ -8,13 +8,13 @@ const coAuthor = (name: string, note?: string): Author => ({ name, isMe: false, 
 
 export const PROFILE = {
   name: "Lei Ke",
-  title: "Senior Researcher",
-  affiliation: "Tencent Hunyuan LLM",
+  title: "Senior Research Scientist",
+  affiliation: "NVIDIA Nemotron Team",
   university: "", 
   email: "keleiwhu [at] gmail.com", 
   googleScholarId: "WseeNrUAAAAJ", 
   citationCount: "3549", // Fallback if live fetch fails
-  bio: `I am a Senior Research Scientist in {{LINK|Tencent Hunyuan LLM (Seattle)|https://hunyuan.tencent.com/research?page=1}}. My primary research interest lies in building multimodal foundation systems, especially the visual understanding, reasoning, and action. 
+  bio: `I am a Senior Research Scientist on the {{LINK|NVIDIA Nemotron Team|https://nemotron-ai.com/}}, where I work on language model systems training. Previously, I was a Senior Research Scientist at Tencent HY LLM (Seattle), working on visual agentic models. My research focuses on building agentic LLM systems.
   
   Previously, I worked as a Postdoctoral Research Associate at Computer Science of {{LINK|Carnegie Mellon University|https://www.ml.cmu.edu/}} with {{LINK|Katerina Fragkiadaki|https://www.cs.cmu.edu/~katef/}} and in the Computer Vision Lab of {{LINK|ETH Zurich|https://ethz.ch/en.html}}. I obtained my Ph.D. degree from {{LINK|CSE Department|https://www.cse.ust.hk/}} at {{LINK|HKUST|https://www.ust.hk/}} in mid 2023, supervised by {{LINK|Chi-Keung Tang|http://home.cse.ust.hk/~cktang/bio.html}} and {{LINK|Yu-Wing Tai|https://yuwingtai.github.io/}}. During the PhD journey, I also spent two years as a visiting scholar at ETH Zurich. I received my B.E. degree from the school of computer science at {{LINK|Wuhan University|https://en.wikipedia.org/wiki/Wuhan_University}}. My algorithm is integrated into the {{LINK|Hugging Face library|https://huggingface.co/docs/transformers/main/model_doc/sam_hq}}, and my opensource projects obtain over {{BOLD|10K+ GitHub stars}}.`, 
   avatarUrl: "image/kelei_portrait_small_new.png", 
@@ -407,10 +407,18 @@ export const EXPERIENCES: Experience[] = [
   {
     id: 'e0',
     role: "Senior Research Scientist",
-    institution: "Tencent Hunyuan LLM",
-    period: "2025.03 — Current",
+    institution: "NVIDIA Nemotron Team",
+    period: "2026.09 — Current",
+    description: "Language model systems training",
+    logo: "images/nvidia-logo-vert-blk.png"
+  },
+  {
+    id: 'e0-tencent',
+    role: "Senior Research Scientist",
+    institution: "Tencent HY LLM (Seattle)",
+    period: "2025.03 — 2026.08",
     description: "",
-    logo: "https://avatars.githubusercontent.com/u/54961825?v=4"
+    logo: "images/tencent-hunyuan-logo.svg"
   },
   {
     id: 'e1',
