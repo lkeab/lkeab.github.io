@@ -71,7 +71,7 @@ export const PUBLICATIONS: Publication[] = [
   {
     id: 'new_ui_mate',
     title: "UI-Mate: Advancing Open-Weight Foundation GUI Agents with In-Context Demonstrations",
-    authors: [coAuthor("Tencent HY Frontier Team")],
+    authors: [coAuthor("Tencent HY Frontier Team"), { name: "Lei Ke", isMe: true, note: "(Project Co-Lead)" }],
     venue: "arXiv 2026",
     year: 2026,
     abstract: "UI-Mate is an open-weight foundation GUI agent that combines environment-grounded training with in-context demonstrations, achieving strong general computer-use performance while using a single demonstration to improve long-horizon reliability.",
