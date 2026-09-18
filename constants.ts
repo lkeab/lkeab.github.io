@@ -9,7 +9,7 @@ const coAuthor = (name: string, note?: string): Author => ({ name, isMe: false, 
 export const PROFILE = {
   name: "Lei Ke",
   title: "Senior Research Scientist",
-  affiliation: "NVIDIA Nemotron",
+  affiliation: "NVIDIA",
   university: "", 
   email: "keleiwhu [at] gmail.com", 
   googleScholarId: "WseeNrUAAAAJ", 
