@@ -392,7 +392,19 @@ const App: React.FC = () => {
               <div key={award.id} className="flex gap-4 items-start p-5 rounded-lg bg-gray-50 border border-gray-100 hover:border-blue-200 transition-colors">
                 <span className="font-mono text-blue-600 font-bold text-lg">{award.year}</span>
                 <div>
-                  <h3 className="font-bold text-gray-900">{award.title}</h3>
+                  <h3 className="font-bold text-gray-900">
+                    {award.link ? (
+                      <a
+                        href={award.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 hover:text-blue-600 transition-colors"
+                      >
+                        {award.title}
+                        <ExternalLink size={13} />
+                      </a>
+                    ) : award.title}
+                  </h3>
                   {award.description && <p className="text-sm text-gray-500 mt-1">{award.description}</p>}
                 </div>
               </div>

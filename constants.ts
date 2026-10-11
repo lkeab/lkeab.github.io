@@ -476,6 +476,7 @@ export const EXPERIENCES: Experience[] = [
 ];
 
 export const AWARDS: Award[] = [
+  { id: 'a0', year: "2026", title: "World’s Top 2% Scientists", description: "Stanford–Elsevier single-year impact list", link: "https://topscinet.com/scientist_profile/Ke,%20Lei/2019/?stype=single_year" },
   { id: 'a1', year: "2023", title: "CVPR Doctoral Consortium Awards (13% success rate)", description: "Supervised by Michael Maire" },
   { id: 'a2', year: "2022", title: "Most Popular Speakers in TechBeat" },
   { id: 'a3', year: "2022", title: "Research Travel Grant, ETH Zurich" },
@@ -487,7 +488,7 @@ export const AWARDS: Award[] = [
 export const ACTIVITIES: ProfessionalActivity[] = [
   {
     category: "Area Chair",
-    items: ["NeurIPS 2025", "ICLR 2026", "NeurIPS 2026"]
+    items: ["NeurIPS 2025", "ICLR 2026", "NeurIPS 2026", "ICLR 2027"]
   },
   {
     category: "Conference Review",
